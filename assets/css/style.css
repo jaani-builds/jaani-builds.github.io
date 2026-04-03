@@ -686,19 +686,6 @@ body::-webkit-scrollbar-thumb:hover {
   min-height: 320px;
 }
 
-.recommendation-widget-block + .recommendation-widget-block {
-  margin-top: 1rem;
-}
-
-.recommendation-widget-label {
-  margin: 0;
-  font-size: 0.8rem;
-  color: var(--muted);
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-
 .recommendations-widget-shell {
   margin-top: 1rem;
   min-height: 220px;
@@ -707,13 +694,6 @@ body::-webkit-scrollbar-thumb:hover {
   background: rgba(94, 179, 255, 0.03);
   padding: 1rem;
   overflow: hidden;
-}
-
-.recommendation-widget-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 .recommendation-header {
