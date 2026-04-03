@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: resume
+    env: docker
+    dockerfilePath: ./Dockerfile.prod
+    plan: free
+    healthCheckPath: /

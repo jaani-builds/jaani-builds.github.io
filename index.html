@@ -3,14 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=/resume/" />
-    <script>
-      window.location.replace('/resume/');
-    </script>
+    <title>Interactive Resume Template</title>
+    <meta name="description" content="Reusable interactive resume template powered by a single JSON file." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Libre+Baskerville:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <p>Redirecting to resume...</p>
-    <p><a href="/resume/">Continue to resume</a></p>
+    <main class="page" id="app">
+      <p class="loading">Loading resume...</p>
+    </main>
+
+    <script type="module" src="assets/js/main.js"></script>
   </body>
 </html>

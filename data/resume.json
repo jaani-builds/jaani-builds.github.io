@@ -1,0 +1,238 @@
+{
+  "basics": {
+    "name": "Jaani Francis Nickolas",
+    "role": "Technical Product Owner",
+    "email": "jaanifly@gmail.com",
+    "phone": "+65 85123705",
+    "location": "Singapore",
+    "linkedin": "https://linkedin.com/in/jaani-francis-nickolas/",
+    "github": "https://github.com/jaani-builds",
+    "photoUrl": ""
+  },
+  "meta": {
+    "title": "Jaani Francis Nickolas | Technical Product Owner",
+    "description": "Technical Product Owner with 10+ years in enterprise aviation, cloud platforms, and software delivery."
+  },
+  "sectionLabels": {
+    "about": "About me",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "certifications": "Certifications",
+    "experiments": "Experiments",
+    "recommendations": "Recommendations"
+  },
+  "publicUrl": "https://jaani-builds.github.io/",
+  "summary": "Technical Product Owner with 10+ years in enterprise aviation, delivering high-quality software through strong technical expertise and modern infrastructure. Skilled at aligning business objectives with cloud-driven solutions while leading teams and managing stakeholders for timely, compliant delivery.",
+  "pdfUrl": "assets/resume/Jaani-Francis-Nickolas-Resume.pdf",
+  "experience": [
+    {
+      "title": "Technical Product Owner",
+      "company": "Jetstar Airways",
+      "location": "Singapore",
+      "employmentType": "Full-time",
+      "start": "Jul 2024",
+      "end": "Present",
+      "highlights": [
+        "Defined and executed the vision and roadmap for Jetstar's Internal Developer Platform and Unified Infrastructure initiatives, standardising platform capabilities and accelerating infrastructure onboarding across teams.",
+        "Led cloud migration efforts, ensuring seamless integration with parent organisation systems and full PCI compliance.",
+        "Reported progress and key metrics to senior management and stakeholders, enabling data-driven decision-making and continuous improvement.",
+        "Led quarterly planning and initiative scoping sessions using Jira, Confluence, and Miro, ensuring strong stakeholder alignment and clear delivery expectations.",
+        "Developed the Platform Team Engagement Guide to enhance cross-team collaboration, streamline onboarding, and support automation-driven workflows.",
+        "Maintained healthy backlog management and team wellbeing, resulting in increased deployment cadence, improved sprint predictability, and consistent delivery quality."
+      ]
+    },
+    {
+      "title": "Cloud Engineer",
+      "company": "Jetstar Airways",
+      "location": "Singapore",
+      "employmentType": "Full-time",
+      "start": "Sep 2022",
+      "end": "Jul 2024",
+      "highlights": [
+        "Governed and optimised AWS workloads within unified infrastructure, focusing on scalability, performance, and cost efficiency.",
+        "Led CI/CD migration from GoCD to GitHub Actions, standardising pipelines with reusable templates.",
+        "Designed and managed Akamai CDN configurations including WAF, Bot Manager, and edge property management to improve security and performance.",
+        "Implemented observability frameworks using CloudWatch, Splunk, and Datadog, enabling proactive incident detection and faster resolution.",
+        "Supported feature teams with robust operational models and handled critical incident management, including CrowdStrike security events."
+      ]
+    },
+    {
+      "title": "Senior Software Developer",
+      "company": "Jetstar Airways",
+      "location": "Singapore",
+      "employmentType": "Full-time",
+      "start": "Feb 2017",
+      "end": "Sep 2022",
+      "highlights": [
+        "Developed and maintained mobile backend services and DevOps pipelines using C#, SOAP and REST APIs, Jenkins, AWS CloudFormation, and CI/CD best practices.",
+        "Built Jetstar's microservices-based modular distribution platform from the ground up using REST APIs.",
+        "Partnered with operations to implement proactive monitoring and alerting, reducing downtime and improving service reliability."
+      ]
+    },
+    {
+      "title": "Application Developer",
+      "company": "Thoughtworks",
+      "location": "India",
+      "employmentType": "Full-time",
+      "start": "Oct 2013",
+      "end": "Feb 2017",
+      "highlights": [
+        "Identified UI/UX gaps and introduced Atomic Design methodology while building Thoughtworks.com, improving frontend consistency and maintainability.",
+        "Developed .NET based systems in C# with CI/CD pipelines in GoCD for airline reservation solutions (dotRez).",
+        "Delivered applications using Java and MongoDB for healthcare solutions and contributed to iOS app development in Objective-C."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Technology (M. Tech) in Information Technology",
+      "school": "Bharathidasan University",
+      "start": "2013",
+      "end": "2015"
+    },
+    {
+      "degree": "Bachelor of Technology (B. Tech) in Computer Science",
+      "school": "Amrita Vishwa Vidyapeetham",
+      "start": "2009",
+      "end": "2013"
+    }
+  ],
+  "recommendations": [
+    {
+      "name": "Engineering Stakeholder",
+      "role": "Platform Program Lead",
+      "quote": "Jaani consistently bridges business priorities and delivery execution. He brings calm structure to complex cross-team initiatives and drives outcomes without compromising quality.",
+      "source": "LinkedIn Recommendation",
+      "linkedinUrl": "https://www.linkedin.com/in/jaani-francis-nickolas/details/recommendations/"
+    },
+    {
+      "name": "Delivery Partner",
+      "role": "Senior Engineer",
+      "quote": "He creates clarity for engineers through strong roadmap planning and practical technical decisions, helping teams ship faster and more reliably.",
+      "source": "LinkedIn Recommendation",
+      "linkedinUrl": "https://www.linkedin.com/in/jaani-francis-nickolas/details/recommendations/"
+    }
+  ],
+  "recommendationsWidget": {
+    "enabled": true,
+    "provider": "sociablekit",
+    "widgetId": "25669053",
+    "profileUrl": "https://www.linkedin.com/in/jaani-francis-nickolas/details/recommendations/"
+  },
+  "experiments": [
+    {
+      "name": "Daily Widgets",
+      "type": "full-stack",
+      "backend": {
+        "tech": [
+          "FastAPI",
+          "Python",
+          "Docker"
+        ],
+        "highlights": [
+          "Modular FastAPI backend with endpoints for time, weather, rates, and news",
+          "Country-aware geocoding fallbacks for improved accuracy",
+          "Local developer workflow with scripts"
+        ],
+        "links": [
+          {
+            "label": "Backend Repo",
+            "url": "https://github.com/jaani-builds/daily-widgets-backend"
+          },
+          {
+            "label": "API Demo",
+            "url": "https://daily-widgets-backend.onrender.com/docs"
+          }
+        ]
+      },
+      "frontend": {
+        "tech": [
+          "Vanilla JS",
+          "GitHub Pages"
+        ],
+        "highlights": [
+          "Lightweight location-aware dashboard",
+          "Automatic news refresh synced with weather",
+          "Optimized with client-side caching"
+        ],
+        "links": [
+          {
+            "label": "Live Demo",
+            "url": "https://daily-widgets-frontend.onrender.com"
+          },
+          {
+            "label": "Frontend Repo",
+            "url": "https://github.com/jaani-builds/daily-widgets-frontend"
+          }
+        ]
+      }
+    }
+  ],
+  "skills": {
+    "Product Management": [
+      "Agile & Scrum",
+      "Product Roadmapping",
+      "Backlog Prioritisation",
+      "Stakeholder Management",
+      "Requirements Elicitation",
+      "User Story Mapping",
+      "Acceptance Criteria",
+      "Release Planning",
+      "Sprint Facilitation",
+      "Data-driven Decision Making"
+    ],
+    "Cloud & Platform Engineering": [
+      "AWS",
+      "Akamai CDN & Security",
+      "Internal Developer Platform",
+      "Unified Infrastructure",
+      "Infrastructure as Code (IaC)",
+      "Platform Automation",
+      "Cloud Migration",
+      "Scalability & Performance Optimisation"
+    ],
+    "Programming & Frameworks": [
+      ".NET",
+      "C#",
+      "SOAP",
+      "REST APIs"
+    ],
+    "Tools & Observability": [
+      "Jira",
+      "Confluence",
+      "GitHub",
+      "Miro",
+      "Postman",
+      "AWS CloudWatch",
+      "Splunk",
+      "Datadog",
+      "APM Tools",
+      "Log Analysis"
+    ],
+    "Development Practices": [
+      "DevSecOps",
+      "CI/CD",
+      "DDD",
+      "TDD",
+      "BDD",
+      "API Design & Integration",
+      "Microservices Architecture",
+      "Continuous Testing",
+      "Secure Software Development Lifecycle (SSDLC)",
+      "PCI DSS Compliance"
+    ],
+    "Industry Expertise": [
+      "Aviation",
+      "e-Commerce",
+      "Enterprise Platforms",
+      "Digital Transformation",
+      "Legacy Modernisation",
+      "Platform as a Product",
+      "Regulatory & Compliance"
+    ]
+  },
+  "certifications": [
+    "AWS Certified Cloud Practitioner"
+  ]
+}
