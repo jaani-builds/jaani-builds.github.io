@@ -315,6 +315,19 @@ const getRecommendationsWidgetMarkup = (widget = {}) => {
   return "";
 };
 
+const providerLabel = (provider = "") => {
+  const normalized = String(provider).toLowerCase();
+  if (normalized === "sociablekit") {
+    return "SociableKIT";
+  }
+
+  if (normalized === "elfsight") {
+    return "Elfsight";
+  }
+
+  return "Widget";
+};
+
 const loadScriptOnce = (id, src) => {
   if (document.getElementById(id)) {
     return;
@@ -327,19 +340,15 @@ const loadScriptOnce = (id, src) => {
   document.body.appendChild(script);
 };
 
-const wireRecommendationsWidget = (widget = {}) => {
-  const provider = String(widget.provider || "").toLowerCase();
-  const widgetId = String(widget.widgetId || "").trim();
+const wireRecommendationsWidget = (widgets = []) => {
+  const activeWidgets = widgets.filter((widget) => widget?.enabled && String(widget.widgetId || "").trim());
+  const providers = [...new Set(activeWidgets.map((widget) => String(widget.provider || "").toLowerCase()))];
 
-  if (!widget.enabled || !widgetId) {
-    return;
+  if (providers.includes("elfsight")) {
+      loadScriptOnce("elfsight-platform-script", "https://elfsightcdn.com/platform.js");
   }
 
-  if (provider === "elfsight") {
-    loadScriptOnce("elfsight-platform-script", "https://static.elfsight.com/platform/platform.js");
-  }
-
-  if (provider === "sociablekit") {
+  if (providers.includes("sociablekit")) {
     loadScriptOnce(
       "sociablekit-linkedin-recommendations-script",
       "https://widgets.sociablekit.com/linkedin-recommendations/widget.js",
@@ -403,15 +412,35 @@ const renderExperiments = (items = []) => {
   `;
 };
 
-const renderRecommendations = (widget = {}, items = []) => {
-  const widgetMarkup = getRecommendationsWidgetMarkup(widget);
+const renderRecommendations = (widgets = [], items = []) => {
+  const enabledWidgets = widgets.filter((widget) => widget?.enabled);
 
-  if (widget.enabled && widgetMarkup) {
+  if (enabledWidgets.length) {
+    const widgetBlocks = enabledWidgets
+      .map((widget) => {
+        const markup = getRecommendationsWidgetMarkup(widget);
+        const label = providerLabel(widget.provider);
+
+        if (markup) {
+          return `<div class="recommendation-widget-block"><p class="recommendation-widget-label">${escapeHtml(label)}</p>${markup}</div>`;
+        }
+
+        return `
+          <div class="recommendation-widget-block">
+            <p class="recommendation-widget-label">${escapeHtml(label)}</p>
+            <div class="recommendations-widget-shell recommendation-widget-placeholder">
+              <p class="muted">Set ${escapeHtml(label)} widgetId in resume.json to preview this widget.</p>
+            </div>
+          </div>
+        `;
+      })
+      .join("");
+
     return `
       <section class="panel-grid one-col">
         <article class="card recommendation-widget-card">
-          ${widgetMarkup}
-          ${widget.profileUrl ? `<div class="chip-wrap"><a class="chip-link" href="${escapeHtml(widget.profileUrl)}" target="_blank" rel="noreferrer">View on LinkedIn</a></div>` : ""}
+          ${widgetBlocks}
+          ${enabledWidgets[0]?.profileUrl ? `<div class="chip-wrap"><a class="chip-link" href="${escapeHtml(enabledWidgets[0].profileUrl)}" target="_blank" rel="noreferrer">View on LinkedIn</a></div>` : ""}
         </article>
       </section>
     `;
@@ -465,7 +494,8 @@ const buildSectionLabels = (data = {}) => ({
 
 const buildTabs = (data = {}) => {
   const labels = buildSectionLabels(data);
-  const widgetEnabled = Boolean(data.recommendationsWidget?.enabled && data.recommendationsWidget?.widgetId);
+  const recommendationWidgets = [data.recommendationsWidget || {}, data.recommendationsWidgetSecondary || {}];
+  const hasEnabledWidget = recommendationWidgets.some((widget) => widget?.enabled);
 
   const definitions = [
     { id: "about", label: labels.about, isVisible: () => true, render: () => renderAbout(data) },
@@ -496,8 +526,8 @@ const buildTabs = (data = {}) => {
     {
       id: "recommendations",
       label: labels.recommendations,
-      isVisible: () => widgetEnabled || (Array.isArray(data.recommendations) && data.recommendations.length > 0),
-      render: () => renderRecommendations(data.recommendationsWidget || {}, data.recommendations || []),
+      isVisible: () => hasEnabledWidget || (Array.isArray(data.recommendations) && data.recommendations.length > 0),
+      render: () => renderRecommendations(recommendationWidgets, data.recommendations || []),
     },
     {
       id: "experiments",
@@ -629,6 +659,6 @@ fetch("./data/resume.json")
     app.innerHTML = renderApp(data);
     wireTabs();
     wireRoleAccordions();
-    wireRecommendationsWidget(data.recommendationsWidget || {});
+    wireRecommendationsWidget([data.recommendationsWidget || {}, data.recommendationsWidgetSecondary || {}]);
   })
   .catch(showError);

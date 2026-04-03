@@ -120,6 +120,12 @@
     "widgetId": "25669053",
     "profileUrl": "https://www.linkedin.com/in/jaani-francis-nickolas/details/recommendations/"
   },
+  "recommendationsWidgetSecondary": {
+    "enabled": true,
+    "provider": "elfsight",
+    "widgetId": "914c07cc-edd9-4f6b-841a-759ded4d166d",
+    "profileUrl": "https://www.linkedin.com/in/jaani-francis-nickolas/details/recommendations/"
+  },
   "experiments": [
     {
       "name": "Daily Widgets",
