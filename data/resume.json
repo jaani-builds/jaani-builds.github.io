@@ -138,6 +138,10 @@
         ],
         "links": [
           {
+            "label": "API Demo",
+            "url": "https://api.portfolio.handytools.work/docs"
+          },
+          {
             "label": "Backend Repo",
             "url": "https://github.com/jaani-builds/portfolio-builder-backend"
           }
@@ -156,6 +160,10 @@
           "Static frontend integrated with the backend API for a fast and low-maintenance experience."
         ],
         "links": [
+          {
+            "label": "Live Demo",
+            "url": "https://app.portfolio.handytools.work"
+          },
           {
             "label": "Frontend Repo",
             "url": "https://github.com/jaani-builds/portfolio-builder-frontend"

@@ -90,17 +90,18 @@
         "tech": [
           "FastAPI",
           "Python",
-          "Docker"
+          "Terraform",
+          "AWS Lambda"
         ],
         "highlights": [
-          "Describe backend architecture and key decisions.",
-          "Mention performance, reliability, or observability improvements.",
-          "Highlight deployment or automation workflows."
+          "Describe the API surface, authentication flow, and hosting model.",
+          "Highlight infrastructure automation, deployment consistency, or environment setup.",
+          "Call out the backend capabilities that support the product end to end."
         ],
         "links": [
           {
             "label": "API Demo",
-            "url": "https://example-api.onrender.com/docs"
+            "url": "https://example-api.example.com/docs"
           },
           {
             "label": "Backend Repo",
@@ -112,17 +113,18 @@
         "tech": [
           "Vanilla JS",
           "HTML",
-          "CSS"
+          "CSS",
+          "Cloudflare Pages"
         ],
         "highlights": [
-          "Explain user-facing functionality and UX choices.",
-          "Mention responsiveness and accessibility considerations.",
-          "Include any client-side performance techniques."
+          "Explain the user-facing workflow from sign-in to completion.",
+          "Describe the dashboard or publishing experience in clean, outcome-focused terms.",
+          "Mention the deployment style and why the frontend stays fast and simple."
         ],
         "links": [
           {
             "label": "Live Demo",
-            "url": "https://example-frontend.onrender.com"
+            "url": "https://example-app.example.com"
           },
           {
             "label": "Frontend Repo",
