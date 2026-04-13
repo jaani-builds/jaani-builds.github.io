@@ -122,6 +122,48 @@
   },
   "experiments": [
     {
+      "name": "Portfolio Builder",
+      "type": "full-stack",
+      "backend": {
+        "tech": [
+          "FastAPI",
+          "Python",
+          "Terraform",
+          "AWS Lambda"
+        ],
+        "highlights": [
+          "Serverless backend for GitHub OAuth, resume parsing, slug publishing, and hosted portfolio delivery.",
+          "Infrastructure defined with Terraform for repeatable deployment and clean environment setup.",
+          "Designed for lightweight operations with API-first flows and production-ready routing."
+        ],
+        "links": [
+          {
+            "label": "Backend Repo",
+            "url": "https://github.com/jaani-builds/portfolio-builder-backend"
+          }
+        ]
+      },
+      "frontend": {
+        "tech": [
+          "Vanilla JS",
+          "HTML",
+          "CSS",
+          "Cloudflare Pages"
+        ],
+        "highlights": [
+          "Focused publishing flow that takes a resume from upload to live portfolio in a few steps.",
+          "Simple dashboard for sign-in, content upload, slug management, and publish confirmation.",
+          "Static frontend integrated with the backend API for a fast and low-maintenance experience."
+        ],
+        "links": [
+          {
+            "label": "Frontend Repo",
+            "url": "https://github.com/jaani-builds/portfolio-builder-frontend"
+          }
+        ]
+      }
+    },
+    {
       "name": "Daily Widgets",
       "type": "full-stack",
       "backend": {
