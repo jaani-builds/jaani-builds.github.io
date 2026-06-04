@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Jaani Francis Nickolas",
-    "role": "Technical Product Owner | Platform Engineering | Internal Developer Platform (IDP) | AWS | DevOps | Security & Compliance",
+    "role": "Technical Product Owner | Multi-Cloud Platforms | Infrastructure Engineering | Internal Developer Platforms",
     "email": "jaanifly@gmail.com",
     "phone": "+65 85123705",
     "location": "Singapore",
@@ -10,8 +10,8 @@
     "photoUrl": ""
   },
   "meta": {
-    "title": "Jaani Francis Nickolas | Technical Product Owner | Platform Engineering | Internal Developer Platform (IDP) | AWS | DevOps | Security & Compliance",
-    "description": "Technical Product Owner with 10+ years of experience in enterprise aviation, delivering secure, scalable platforms through strong cloud and DevOps expertise. Specialised in building Internal Developer Platforms (IDP) that improve developer experience, standardise infrastructure and security, and reduce delivery friction across teams. Proven ability to align platform strategy with engineering execution and drive measurable improvements in onboarding and operational efficiency."
+    "title": "Jaani Francis Nickolas | Technical Product Owner | Multi-Cloud Platforms | Infrastructure Engineering | Internal Developer Platforms",
+    "description": "Technical Product Owner with 10+ years of experience in multi-cloud platforms, infrastructure engineering, and software delivery. Experienced in product strategy, roadmap planning, stakeholder management, and cross-functional team leadership. Proven track record of building Internal Developer Platforms (IDP), driving cloud migration initiatives, maintaining PCI DSS compliance, and delivering secure, scalable cloud-native solutions. Delivered measurable outcomes including 40% faster infrastructure onboarding, 20-30% infrastructure cost optimization, and improved developer productivity through platform standardization and automation."
   },
   "sectionLabels": {
     "about": "About me",
@@ -23,8 +23,8 @@
     "recommendations": "Recommendations"
   },
   "publicUrl": "https://jaani-builds.github.io/",
-  "summary": "Technical Product Owner with 10+ years of experience in enterprise aviation, delivering secure, scalable platforms through strong cloud and DevOps expertise. Specialised in building Internal Developer Platforms (IDP) that improve developer experience, standardise infrastructure and security, and reduce delivery friction across teams. Proven ability to align platform strategy with engineering execution and drive measurable improvements in onboarding and operational efficiency.",
-  "pdfUrl": "assets/resume/jaani-francis-nickolas-resume.pdf",
+  "summary": "Technical Product Owner with 10+ years of experience in multi-cloud platforms, infrastructure engineering, and software delivery. Experienced in product strategy, roadmap planning, stakeholder management, and cross-functional team leadership. Proven track record of building Internal Developer Platforms (IDP), driving cloud migration initiatives, maintaining PCI DSS compliance, and delivering secure, scalable cloud-native solutions. Delivered measurable outcomes including 40% faster infrastructure onboarding, 20-30% infrastructure cost optimization, and improved developer productivity through platform standardization and automation.",
+  "resumeUrl": "assets/resume/Jaani_Francis_Nickolas_Resume.docx",
   "experience": [
     {
       "title": "Technical Product Owner",
@@ -34,13 +34,13 @@
       "start": "Jul 2024",
       "end": "Present",
       "highlights": [
-        "Orchestrated the vision and roadmap for Jetstar's Internal Developer Platform (IDP) and Unified Infrastructure, reducing infrastructure onboarding time by ~40% and accelerating enterprise-wide platform adoption across engineering squads.",
-        "Pioneered a Two-Mode Operating Model for the cloud platform team: a structured Support track (Batman & Robin on-call model ensuring 24/7 platform reliability) and a Sprint track (quarterly goal-driven delivery aligned to organisational OKRs), eliminating the conflict between reactive operations and strategic delivery.",
-        "Led proof-of-concept (POC) for AWS cloud migration aligned with Qantas Group systems, evaluating feasibility, integration requirements, and technical readiness for enterprise-scale migration.",
+        "Owned the vision and roadmap for Jetstar's Internal Developer Platform (IDP) and Unified Infrastructure, cutting infrastructure onboarding time by ~40% and driving adoption across 10+ engineering squads, eliminating ticket-driven dependencies on the platform team.",
+        "Drove voluntary adoption of the Platform Team Engagement Guide across 10+ squads with no mandate, standardizing onboarding and automation-first workflows through enablement, not enforcement.",
+        "Introduced a dual-track operating model separating platform support and roadmap delivery, improving operational reliability and execution for an 8-member platform team supporting 10+ engineering squads.",
+        "Owned end-to-end migration of 10+ workloads from Jetstar to Qantas Cloud Platform, defining migration sequencing, risk mitigation strategy, and landing zone alignment, with zero production incidents at cutover.",
         "Maintained 100% PCI DSS compliance across existing infrastructure through year-on-year assessment cycles, coordinating audit readiness, evidence gathering, and continuous control improvements.",
-        "Drove cross-team alignment through Scrum of Scrums, 3 Amigos sessions, and domain alignment meetings, ensuring shared understanding across product, engineering, and architecture before work entered the sprint.",
-        "Delivered high-impact executive reporting with actionable KPIs and metrics, enabling data-driven strategy, continuous optimisation, and confident roadmap prioritisation.",
-        "Engineered the Platform Team Engagement Guide, transforming cross-team collaboration, streamlining onboarding processes, and scaling automation-first workflows."
+        "Owned platform delivery across 4 geographies (SG, AU, BKK, MNL), aligning 6 stakeholder functions including security, cloud, and release management to unblock engineering squads and sustain adoption velocity.",
+        "Defined and tracked platform OKRs, SLOs, and delivery metrics, reporting to senior leadership to drive data-informed prioritization and roadmap trade-off decisions."
       ]
     },
     {
@@ -54,8 +54,8 @@
         "Optimised AWS workloads across unified infrastructure, reducing infrastructure costs by ~20-30% through right-sizing and improved resource utilisation.",
         "Transformed CI/CD pipelines from GoCD to GitHub Actions, cutting deployment time from hours to minutes and standardising reusable automation frameworks across 10+ teams.",
         "Architected and managed Akamai CDN solutions including WAF rules and Bot Manager policies, strengthening application security posture and improving global edge performance.",
-        "Established advanced observability frameworks using CloudWatch, Splunk, and Datadog, enabling proactive incident detection and faster resolution across production systems.",
-        "Led cloud hardening initiative in response to CrowdStrike findings, systematically remediating all critical and high vulnerabilities across the AWS infrastructure to strengthen the overall security posture."
+        "Implemented observability solutions using Datadog, Splunk, and CloudWatch, improving monitoring, incident detection, and operational visibility.",
+        "Spearheaded emergency cloud hardening initiative following CrowdStrike findings, remediating 100% of critical and high vulnerabilities across AWS infrastructure within 3 weeks, restoring security posture ahead of schedule."
       ]
     },
     {
@@ -67,7 +67,7 @@
       "end": "Sep 2022",
       "highlights": [
         "Engineered Jetstar's microservices-based modular distribution platform from the ground up, supporting 100k+ daily e-commerce booking requests with high availability and API-driven architecture.",
-        "Developed and maintained scalable mobile backend services and DevOps pipelines using C#, REST/SOAP APIs, Jenkins, and AWS CloudFormation, driving reliable CI/CD delivery and improved release frequency.",
+        "Built and maintained scalable mobile backend services and DevOps pipelines (C#, REST/SOAP, Jenkins, AWS CloudFormation), increasing release frequency and reducing deployment failures through standardized CI/CD practices.",
         "Partnered with operations to implement proactive monitoring and alerting, significantly reducing unplanned downtime and enhancing overall service reliability."
       ]
     },
@@ -79,7 +79,7 @@
       "start": "Oct 2013",
       "end": "Feb 2017",
       "highlights": [
-        "Delivered enterprise .NET/Java applications, introduced Atomic Design for frontend consistency, built CI/CD pipelines for airline reservation systems, and contributed to iOS development."
+        "Delivered enterprise applications across airline and e-commerce domains using .NET and Java, implemented CI/CD pipelines, and established frontend design standards via Atomic Design adopted as a team baseline for thoughtworks.com website."
       ]
     }
   ],
@@ -87,14 +87,14 @@
     {
       "degree": "Master of Technology (M.Tech) in Information Technology",
       "school": "Bharathidasan University",
-      "start": "2013",
-      "end": "2015"
+      "start": "Jul 2013",
+      "end": "Jun 2015"
     },
     {
       "degree": "Bachelor of Technology (B.Tech) in Computer Science",
       "school": "Amrita Vishwa Vidyapeetham",
-      "start": "2009",
-      "end": "2013"
+      "start": "Jul 2009",
+      "end": "Jun 2013"
     }
   ],
   "recommendations": [
@@ -224,14 +224,27 @@
       "Terraform",
       "Docker",
       "Kubernetes",
-      "Akamai CDN & WAF",
+      "Akamai CDN",
+      "WAF & Bot Managers",
       "IaC",
       "Cloud Migration",
       "Platform Automation",
+      "Platform SLO",
+      "Backstage IDP",
       "PCI DSS Compliance"
+    ],
+    "Programming": [
+      ".NET",
+      "C#",
+      "Java",
+      "Objective-C",
+      "Python",
+      "JavaScript",
+      "MongoDB"
     ],
     "DevOps & Practices": [
       "CI/CD (GitHub Actions, GoCD, Jenkins)",
+      "ArgoCD",
       "DevSecOps",
       "SSDLC",
       "TDD",
@@ -241,20 +254,19 @@
       "REST & SOAP APIs",
       "Continuous Testing"
     ],
-    "Product Management": [
-      "Agile & Scrum",
-      "Product Roadmapping",
+    "Product & Delivery": [
+      "Jira",
+      "Confluence",
+      "Miro",
+      "OKRs",
+      "Roadmapping",
       "Backlog Prioritisation",
       "Stakeholder Management",
+      "Agile & Scrum",
       "Requirements Elicitation",
       "User Story Mapping",
-      "Acceptance Criteria",
       "Release Planning",
       "Sprint Facilitation",
-      "Scrum of Scrums",
-      "3 Amigos",
-      "Domain Alignment",
-      "OKRs",
       "Data-driven Decision Making"
     ],
     "Observability & Tools": [
@@ -263,22 +275,15 @@
       "AWS CloudWatch",
       "APM",
       "Log Analysis",
-      "Jira",
-      "Confluence",
-      "Miro",
-      "GitHub",
       "Postman"
     ],
-    "Programming": [
-      ".NET",
-      "C#",
-      "Java",
-      "Objective-C",
-      "JavaScript",
-      "MongoDB"
+    "FinOps & Cost Management": [
+      "Cloudability",
+      "AWS Cost Explorer"
     ]
   },
   "certifications": [
-    "AWS Certified Cloud Practitioner"
+    "AWS Certified Cloud Practitioner",
+    "HashiCorp Certified Terraform Associate (In Progress, expected Jun 2026)"
   ]
 }

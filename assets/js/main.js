@@ -527,6 +527,7 @@ const updateDocumentMeta = (data = {}) => {
 const renderApp = (data = {}) => {
   const tabs = buildTabs(data);
   activeTabIds = tabs.map((tab) => tab.id);
+  const downloadUrl = data.resumeUrl || data.pdfUrl || "";
 
   const tabButtons = tabs.map((tab, index) => renderTabButton(tab.id, tab.label, index === 0)).join("");
   const tabPanels = tabs.map((tab, index) => renderTabPanel(tab.id, tab.render(), index === 0)).join("");
@@ -539,7 +540,7 @@ const renderApp = (data = {}) => {
             <h1>${escapeHtml(data.basics?.name || "Interactive Resume")}</h1>
             <p class="hero-role">${escapeHtml(data.basics?.role || "")}</p>
           </div>
-          ${data.pdfUrl ? `<a class="pdf-download-btn" href="${escapeHtml(data.pdfUrl)}" download><span>Download</span><span>PDF</span></a>` : ""}
+          ${downloadUrl ? `<a class="pdf-download-btn" href="${escapeHtml(downloadUrl)}" download><span>Download</span><span>Resume</span></a>` : ""}
         </div>
       </header>
 
