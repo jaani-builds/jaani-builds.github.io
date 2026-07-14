@@ -283,9 +283,21 @@
     ]
   },
   "certifications": [
-    "AWS Certified AI Practitioner",
-    "HashiCorp Certified Terraform Associate",
-    "Lean Six Sigma Yellow Belt",
-    "AWS Certified Cloud Practitioner"
+    {
+      "name": "AWS Certified AI Practitioner",
+      "studyGuideUrl": "https://github.com/jaani-builds/knowledge-bank/blob/main/AWS%20Certs/AWS_AIF_Study_Guide.pdf"
+    },
+    {
+      "name": "HashiCorp Certified Terraform Associate",
+      "studyGuideUrl": ""
+    },
+    {
+      "name": "Lean Six Sigma Yellow Belt",
+      "studyGuideUrl": ""
+    },
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "studyGuideUrl": ""
+    }
   ]
 }

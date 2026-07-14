@@ -283,14 +283,26 @@ const renderCertifications = (items = []) => {
   return `
     <section class="panel-grid one-col">
       ${items
-        .map(
-          (item) => `
+        .map((item) => {
+          // Certifications can be a plain string, or an object like:
+          // { "name": "AWS Certified AI Practitioner", "studyGuideUrl": "https://..." }
+          const name = typeof item === "string" ? item : item.name || "";
+          const studyGuideUrl = typeof item === "object" && item.studyGuideUrl ? item.studyGuideUrl : "";
+
+          return `
         <article class="card cert-card">
           <p class="cert-badge">✓</p>
-          <p><strong>${escapeHtml(item)}</strong></p>
+          <div class="cert-info">
+            <p><strong>${escapeHtml(name)}</strong></p>
+            ${
+              studyGuideUrl
+                ? `<a class="chip-link" href="${escapeHtml(studyGuideUrl)}" target="_blank" rel="noreferrer"> Free - Quick Study Guide</a>`
+                : ""
+            }
+          </div>
         </article>
-      `,
-        )
+      `;
+        })
         .join("")}
     </section>
   `;
