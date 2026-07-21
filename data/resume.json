@@ -7,7 +7,7 @@
     "location": "Singapore",
     "linkedin": "https://linkedin.com/in/jaani-francis-nickolas/",
     "github": "https://github.com/jaani-builds",
-    "photoUrl": ""
+    "photoUrl": "assets/images/profile/jaani.png"
   },
   "meta": {
     "title": "Jaani Francis Nickolas | Technical Product Owner | Multi-Cloud Platforms | Infrastructure Engineering | Internal Developer Platforms",
@@ -20,7 +20,8 @@
     "skills": "Skills",
     "certifications": "Certifications",
     "experiments": "Experiments",
-    "recommendations": "Recommendations"
+    "recommendations": "Recommendations",
+    "blogs": "Blogs"
   },
   "publicUrl": "https://jaani-builds.github.io/",
   "summary": "Technical Product Owner with 10+ years of experience in multi-cloud platforms, infrastructure engineering, and software delivery. Experienced in product strategy, roadmap planning, stakeholder management, and cross-functional team leadership. Proven track record of building Internal Developer Platforms (IDP), driving cloud migration initiatives, maintaining PCI DSS compliance, and delivering secure, scalable cloud-native solutions. Delivered measurable outcomes including 40% faster infrastructure onboarding, 20-30% infrastructure cost optimization, and improved developer productivity through platform standardization and automation.",
@@ -282,21 +283,29 @@
       "AWS Cost Explorer"
     ]
   },
+  "blogs": [],
   "certifications": [
     {
       "name": "AWS Certified AI Practitioner",
+      "issuer": "Amazon Web Services",
+      "badgeUrl": "assets/images/certifications/aws-certified-ai-practitioner.png",
       "studyGuideUrl": "https://github.com/jaani-builds/knowledge-bank/blob/main/AWS%20Certs/AWS_AIF_Study_Guide.pdf"
     },
     {
       "name": "HashiCorp Certified Terraform Associate",
+      "issuer": "HashiCorp",
+      "badgeUrl": "assets/images/certifications/hashicorp-certified-terraform-associate-004.png",
       "studyGuideUrl": ""
     },
     {
       "name": "Lean Six Sigma Yellow Belt",
+      "issuer": "Lean Six Sigma",
       "studyGuideUrl": ""
     },
     {
       "name": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "badgeUrl": "assets/images/certifications/aws-certified-cloud-practitioner.png",
       "studyGuideUrl": ""
     }
   ]

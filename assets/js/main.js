@@ -8,6 +8,7 @@ const DEFAULT_SECTION_LABELS = {
   certifications: "Certifications",
   experiments: "Experiments",
   recommendations: "Recommendations",
+  blogs: "Blogs",
 };
 
 let activeTabIds = [];
@@ -53,6 +54,17 @@ const formatDateRange = (start = "", end = "") => {
   return `${formatDate(start)} - ${formattedEnd}`;
 };
 
+const renderRole = (role = "") =>
+  String(role)
+    .split("|")
+    .map((part) => part.trim())
+    .filter(Boolean)
+    .map(
+      (part, index) =>
+        `<span class="hero-role-group">${index > 0 ? '<span class="hero-role-separator" aria-hidden="true">|</span>' : ""}<span class="hero-role-item">${escapeHtml(part)}</span></span>`,
+    )
+    .join("");
+
 const renderLinkButton = (link = {}) => {
   if (!link?.url || !link?.label) {
     return "";
@@ -80,7 +92,8 @@ const buildContactItems = (basics = {}) =>
   [
     basics.linkedin
       ? {
-          icon: "💼",
+          icon: "assets/images/contact/linkedin.png",
+          iconClass: "linkedin",
           title: "LinkedIn",
           value: "Professional Profile",
           url: basics.linkedin,
@@ -88,7 +101,8 @@ const buildContactItems = (basics = {}) =>
       : null,
     basics.github
       ? {
-          icon: "🐙",
+          icon: "assets/images/contact/github.png",
+          iconClass: "github",
           title: "GitHub",
           value: "Code & Projects",
           url: basics.github,
@@ -96,7 +110,8 @@ const buildContactItems = (basics = {}) =>
       : null,
     basics.email
       ? {
-          icon: "✉️",
+          icon: "assets/images/contact/email.svg",
+          iconClass: "email",
           title: "Email",
           value: basics.email,
           url: `mailto:${basics.email}`,
@@ -104,7 +119,8 @@ const buildContactItems = (basics = {}) =>
       : null,
     basics.phone
       ? {
-          icon: "📱",
+          icon: "assets/images/contact/phone.svg",
+          iconClass: "phone",
           title: "Phone",
           value: basics.phone,
           url: `tel:${basics.phone.replace(/[^\d+]/g, "")}`,
@@ -119,7 +135,7 @@ const renderContactCards = (items = []) =>
 
       return `
         <a class="card contact-card" href="${escapeHtml(item.url)}"${targetAttrs} aria-label="${escapeHtml(item.title)}: ${escapeHtml(item.value)}">
-          <div class="contact-icon">${item.icon}</div>
+          <img class="contact-icon contact-icon-${escapeHtml(item.iconClass)}" src="${escapeHtml(item.icon)}" alt="" />
           <h4>${escapeHtml(item.title)}</h4>
           <p>${escapeHtml(item.value)}</p>
         </a>
@@ -275,6 +291,27 @@ const renderSkills = (skills = {}) => {
   `;
 };
 
+const renderCertificationBadge = (item = {}) => {
+  const normalizedItem = typeof item === "string" ? { name: item } : item;
+  const name = normalizedItem.name || "Certification";
+
+  if (normalizedItem.badgeUrl) {
+    return `
+      <span class="certification-badge-spinner">
+        <img class="certification-badge-image certification-badge-front" src="${escapeHtml(normalizedItem.badgeUrl)}" alt="${escapeHtml(name)} badge" />
+        <img class="certification-badge-image certification-badge-back" src="${escapeHtml(normalizedItem.badgeUrl)}" alt="" aria-hidden="true" />
+      </span>
+    `;
+  }
+
+  return `
+    <span class="certification-badge-spinner">
+      <span class="certification-badge-placeholder certification-badge-front" aria-hidden="true">◆</span>
+      <span class="certification-badge-placeholder certification-badge-back" aria-hidden="true">◆</span>
+    </span>
+  `;
+};
+
 const renderCertifications = (items = []) => {
   if (!items.length) {
     return `<section class="panel-grid one-col"><article class="card"><p class="muted">No certifications added yet.</p></article></section>`;
@@ -291,7 +328,9 @@ const renderCertifications = (items = []) => {
 
           return `
         <article class="card cert-card">
-          <p class="cert-badge">✓</p>
+          <div class="cert-badge-visual" title="${escapeHtml(name)}">
+            ${renderCertificationBadge(item)}
+          </div>
           <div class="cert-info">
             <p><strong>${escapeHtml(name)}</strong></p>
             ${
@@ -306,6 +345,41 @@ const renderCertifications = (items = []) => {
         .join("")}
     </section>
   `;
+};
+
+const renderCertificationShowcase = (items = []) => {
+  if (!items.length) {
+    return "";
+  }
+
+  return `
+    <div class="hero-certifications" aria-label="Certification badges">
+      <div class="hero-badge-list">
+        ${items
+          .map((item) => {
+            const name = typeof item === "string" ? item : item.name || "Certification";
+            return `
+              <div class="hero-badge" title="${escapeHtml(name)}" aria-label="${escapeHtml(name)}">
+                ${renderCertificationBadge(item)}
+              </div>
+            `;
+          })
+          .join("")}
+      </div>
+    </div>
+  `;
+};
+
+const renderHeroBadgeCarousel = (data = {}) => {
+  const badgeSlides = (data.certifications || []).filter((item) => typeof item === "object" && item.badgeUrl);
+  const slides = badgeSlides.map(
+    (item, index) =>
+      `<div class="hero-profile-slide${index === 0 ? " active" : ""}" aria-hidden="${index === 0 ? "false" : "true"}"><img class="hero-carousel-badge" src="${escapeHtml(item.badgeUrl)}" alt="${escapeHtml(item.name || "Certification")} badge" /></div>`,
+  );
+
+  return slides.length
+    ? `<div class="hero-badge-carousel" aria-label="Certification badges">${slides.join("")}</div>`
+    : `<div class="hero-badge-carousel"><span class="certification-badge-placeholder" aria-hidden="true">◆</span></div>`;
 };
 
 const getRecommendationsWidgetMarkup = (widget = {}) => {
@@ -415,6 +489,39 @@ const renderExperiments = (items = []) => {
   `;
 };
 
+const renderBlogs = (items = []) => {
+  if (!items.length) {
+    return `
+      <section class="panel-grid one-col">
+        <article class="card blog-coming-soon">
+          <p class="blog-eyebrow">Writing in progress</p>
+          <h3>Blogs coming soon</h3>
+          <p>I’ll share practical notes on platform engineering, multi-cloud strategy, infrastructure, and technical product ownership here.</p>
+          <p class="visitor-counter" id="visitor-count" hidden aria-live="polite"></p>
+        </article>
+      </section>
+    `;
+  }
+
+  return `
+    <section class="panel-grid one-col">
+      ${items
+        .map(
+          (item, index) => `
+            <article class="card blog-card">
+              ${item.published ? `<p class="blog-meta">${escapeHtml(item.published)}</p>` : ""}
+              <h3>${escapeHtml(item.title || "Untitled post")}</h3>
+              ${item.excerpt ? `<p>${escapeHtml(item.excerpt)}</p>` : ""}
+              ${item.url ? `<a class="chip-link" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">Read article</a>` : ""}
+              ${index === 0 ? '<p class="visitor-counter" id="visitor-count" hidden aria-live="polite"></p>' : ""}
+            </article>
+          `,
+        )
+        .join("")}
+    </section>
+  `;
+};
+
 const renderRecommendations = (widget = {}, items = []) => {
   const widgetMarkup = getRecommendationsWidgetMarkup(widget);
 
@@ -517,6 +624,12 @@ const buildTabs = (data = {}) => {
       isVisible: () => Array.isArray(data.experiments) && data.experiments.length > 0,
       render: () => renderExperiments(data.experiments || []),
     },
+    {
+      id: "blogs",
+      label: labels.blogs,
+      isVisible: () => true,
+      render: () => renderBlogs(data.blogs || []),
+    },
   ];
 
   return definitions.filter((definition) => definition.isVisible());
@@ -548,11 +661,19 @@ const renderApp = (data = {}) => {
     <article class="resume-app">
       <header class="hero">
         <div class="hero-top">
+          <div class="hero-media">
+            <div class="hero-photo-frame">
+              <img class="hero-photo" src="${escapeHtml(data.basics?.photoUrl || "assets/images/profile/jaani.png")}" alt="Portrait of ${escapeHtml(data.basics?.name || "Jaani Francis Nickolas")}" />
+            </div>
+          </div>
           <div class="hero-identity">
             <h1>${escapeHtml(data.basics?.name || "Interactive Resume")}</h1>
-            <p class="hero-role">${escapeHtml(data.basics?.role || "")}</p>
+            <p class="hero-role">${renderRole(data.basics?.role || "")}</p>
           </div>
-          ${downloadUrl ? `<a class="pdf-download-btn" href="${escapeHtml(downloadUrl)}" download><span>Download</span><span>Resume</span></a>` : ""}
+          <div class="hero-badge-media">
+            ${renderHeroBadgeCarousel(data)}
+            ${downloadUrl ? `<a class="pdf-download-btn" href="${escapeHtml(downloadUrl)}" download>Download resume</a>` : ""}
+          </div>
         </div>
       </header>
 
@@ -594,6 +715,69 @@ const wireTabs = () => {
 
   const initialTabId = window.location.hash.replace("#", "");
   setActiveTab(activeTabIds.includes(initialTabId) ? initialTabId : activeTabIds[0]);
+};
+
+const wireHeroCarousel = () => {
+  const slides = Array.from(document.querySelectorAll(".hero-profile-slide"));
+
+  if (slides.length < 2 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  let activeIndex = 0;
+  window.setInterval(() => {
+    slides[activeIndex].classList.remove("active");
+    slides[activeIndex].setAttribute("aria-hidden", "true");
+    activeIndex = (activeIndex + 1) % slides.length;
+    slides[activeIndex].classList.add("active");
+    slides[activeIndex].setAttribute("aria-hidden", "false");
+  }, 3000);
+};
+
+const wireVisitorCounter = () => {
+  const counter = document.getElementById("visitor-count");
+
+  if (!counter) {
+    return;
+  }
+
+  const counterKey = "jaani_builds_portfolio_visits_2026";
+  let shouldIncrement = true;
+
+  try {
+    shouldIncrement = sessionStorage.getItem(counterKey) !== "counted";
+  } catch {
+    shouldIncrement = true;
+  }
+
+  const action = shouldIncrement ? "hit" : "get";
+  fetch(`https://countapi.mileshilliard.com/api/v1/${action}/${counterKey}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Visitor counter unavailable");
+      }
+      return response.json();
+    })
+    .then((result) => {
+      const value = Number(result.value);
+      if (!Number.isFinite(value)) {
+        return;
+      }
+
+      if (shouldIncrement) {
+        try {
+          sessionStorage.setItem(counterKey, "counted");
+        } catch {
+          // Counting still works when browser storage is unavailable.
+        }
+      }
+
+      counter.textContent = value.toLocaleString();
+      counter.hidden = false;
+    })
+    .catch(() => {
+      counter.hidden = true;
+    });
 };
 
 const wireRoleAccordions = () => {
@@ -641,6 +825,8 @@ fetch("./data/resume.json")
     updateDocumentMeta(data);
     app.innerHTML = renderApp(data);
     wireTabs();
+    wireHeroCarousel();
+    wireVisitorCounter();
     wireRoleAccordions();
     wireRecommendationsWidget(data.recommendationsWidget || {});
   })
