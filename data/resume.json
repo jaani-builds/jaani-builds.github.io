@@ -286,6 +286,12 @@
   "blogs": [],
   "certifications": [
     {
+      "name": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "badgeUrl": "assets/images/certifications/aws-certified-cloud-practitioner.png",
+      "studyGuideUrl": "https://github.com/jaani-builds/knowledge-bank/blob/main/AWS%20Certs/AWS_CLF_Study_Guide.pdf"
+    },
+    {
       "name": "AWS Certified AI Practitioner",
       "issuer": "Amazon Web Services",
       "badgeUrl": "assets/images/certifications/aws-certified-ai-practitioner.png",
@@ -298,14 +304,9 @@
       "studyGuideUrl": ""
     },
     {
-      "name": "Lean Six Sigma Yellow Belt",
-      "issuer": "Lean Six Sigma",
-      "studyGuideUrl": ""
-    },
-    {
-      "name": "AWS Certified Cloud Practitioner",
-      "issuer": "Amazon Web Services",
-      "badgeUrl": "assets/images/certifications/aws-certified-cloud-practitioner.png",
+      "name": "Lean6 Certified Six Sigma Yellow Belt",
+      "issuer": "LEAN6",
+      "badgeUrl": "assets/images/certifications/lean6-yellow-belt.png",
       "studyGuideUrl": ""
     }
   ]

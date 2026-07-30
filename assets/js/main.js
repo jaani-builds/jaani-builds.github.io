@@ -372,10 +372,16 @@ const renderCertificationShowcase = (items = []) => {
 
 const renderHeroBadgeCarousel = (data = {}) => {
   const badgeSlides = (data.certifications || []).filter((item) => typeof item === "object" && item.badgeUrl);
-  const slides = badgeSlides.map(
-    (item, index) =>
-      `<div class="hero-profile-slide${index === 0 ? " active" : ""}" aria-hidden="${index === 0 ? "false" : "true"}"><img class="hero-carousel-badge" src="${escapeHtml(item.badgeUrl)}" alt="${escapeHtml(item.name || "Certification")} badge" /></div>`,
-  );
+  const slides = badgeSlides.map((item, index) => {
+    const nextItem = badgeSlides[(index + 1) % badgeSlides.length];
+
+    return `<div class="hero-profile-slide${index === 0 ? " active" : ""}" aria-hidden="${index === 0 ? "false" : "true"}">
+        <span class="hero-carousel-spinner">
+          <img class="hero-carousel-badge hero-carousel-badge-front" src="${escapeHtml(item.badgeUrl)}" alt="${escapeHtml(item.name || "Certification")} badge" />
+          <img class="hero-carousel-badge hero-carousel-badge-back" src="${escapeHtml(nextItem.badgeUrl)}" alt="" aria-hidden="true" />
+        </span>
+      </div>`;
+  });
 
   return slides.length
     ? `<div class="hero-badge-carousel" aria-label="Certification badges">${slides.join("")}</div>`
@@ -718,20 +724,34 @@ const wireTabs = () => {
 };
 
 const wireHeroCarousel = () => {
-  const slides = Array.from(document.querySelectorAll(".hero-profile-slide"));
+  const carousel = document.querySelector(".hero-badge-carousel");
+  const slides = Array.from(carousel?.querySelectorAll(".hero-profile-slide") || []);
 
-  if (slides.length < 2 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  if (!carousel || !slides.length) {
     return;
   }
 
   let activeIndex = 0;
-  window.setInterval(() => {
+  const showNextBadge = () => {
     slides[activeIndex].classList.remove("active");
     slides[activeIndex].setAttribute("aria-hidden", "true");
     activeIndex = (activeIndex + 1) % slides.length;
     slides[activeIndex].classList.add("active");
     slides[activeIndex].setAttribute("aria-hidden", "false");
-  }, 3000);
+  };
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (slides.length > 1) {
+      window.setInterval(showNextBadge, 3000);
+    }
+    return;
+  }
+
+  carousel.addEventListener("animationend", (event) => {
+    if (event.target.classList.contains("hero-carousel-spinner") && slides.length > 1) {
+      showNextBadge();
+    }
+  });
 };
 
 const wireVisitorCounter = () => {
