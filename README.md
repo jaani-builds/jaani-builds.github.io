@@ -40,6 +40,8 @@ Then update `data/resume.json` with your own details.
 - `assets/js/main.js`: rendering and interactions
 - `data/resume.json`: all resume content and optional labels/meta
 - `assets/resume/`: place your downloadable PDF here
+- `assets/images/certifications/`: locally stored certification badges
+- `scripts/add-certification.mjs`: adds a badge and its certification metadata together
 - `Dockerfile`: local Docker preview image
 - `Dockerfile.prod`: production Docker image
 - `render.yaml`: Render deployment config
@@ -93,6 +95,10 @@ Then set:
 ```json
 "pdfUrl": "assets/resume/my-resume.pdf"
 ```
+
+## Certification Workflow
+
+For every new certification, run `scripts/add-certification.mjs`. It copies the badge into the repository, adds the certification details and links to `data/resume.json`, and can replace the downloadable resume when `--resume` is supplied. See `assets/images/certifications/README.md` for the command and options.
 
 ## Optional Recommendations Widget
 

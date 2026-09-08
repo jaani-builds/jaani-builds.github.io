@@ -325,6 +325,7 @@ const renderCertifications = (items = []) => {
           // { "name": "AWS Certified AI Practitioner", "studyGuideUrl": "https://..." }
           const name = typeof item === "string" ? item : item.name || "";
           const studyGuideUrl = typeof item === "object" && item.studyGuideUrl ? item.studyGuideUrl : "";
+          const credentialUrl = typeof item === "object" && item.credentialUrl ? item.credentialUrl : "";
 
           return `
         <article class="card cert-card">
@@ -332,12 +333,22 @@ const renderCertifications = (items = []) => {
             ${renderCertificationBadge(item)}
           </div>
           <div class="cert-info">
-            <p><strong>${escapeHtml(name)}</strong></p>
-            ${
-              studyGuideUrl
-                ? `<a class="chip-link" href="${escapeHtml(studyGuideUrl)}" target="_blank" rel="noreferrer"> Free - Quick Study Guide</a>`
-                : ""
-            }
+            <p>
+              <strong>
+                ${
+                  credentialUrl
+                    ? `<a class="cert-title-link" href="${escapeHtml(credentialUrl)}" target="_blank" rel="noreferrer" title="View ${escapeHtml(name)} credential">${escapeHtml(name)}</a>`
+                    : escapeHtml(name)
+                }
+              </strong>
+            </p>
+            <div class="cert-actions">
+              ${
+                studyGuideUrl
+                  ? `<a class="chip-link" href="${escapeHtml(studyGuideUrl)}" target="_blank" rel="noreferrer">Free - Quick Study Guide</a>`
+                  : ""
+              }
+            </div>
           </div>
         </article>
       `;

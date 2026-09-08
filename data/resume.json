@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Jaani Francis Nickolas",
-    "role": "Technical Product Owner | Multi-Cloud Platforms | Infrastructure Engineering | Internal Developer Platforms",
+    "role": "Product Owner | Multi-Cloud Platforms | Infrastructure Engineering | Internal Developer Platforms",
     "email": "ping.jaani@gmail.com",
     "phone": "+65 85123705",
     "location": "Singapore",
@@ -10,8 +10,8 @@
     "photoUrl": "assets/images/profile/jaani.png"
   },
   "meta": {
-    "title": "Jaani Francis Nickolas | Technical Product Owner | Multi-Cloud Platforms | Infrastructure Engineering | Internal Developer Platforms",
-    "description": "Technical Product Owner with 10+ years of experience in multi-cloud platforms, infrastructure engineering, and software delivery. Experienced in product strategy, roadmap planning, stakeholder management, and cross-functional team leadership. Proven track record of building Internal Developer Platforms (IDP), driving cloud migration initiatives, maintaining PCI DSS compliance, and delivering secure, scalable cloud-native solutions. Delivered measurable outcomes including 40% faster infrastructure onboarding, 20-30% infrastructure cost optimization, and improved developer productivity through platform standardization and automation."
+    "title": "Jaani Francis Nickolas | Product Owner | Multi-Cloud Platforms | Infrastructure Engineering | Internal Developer Platforms",
+    "description": "Product Owner with 10+ years of experience in multi-cloud platforms, infrastructure engineering, and software delivery. Experienced in product strategy, roadmap planning, stakeholder management, and cross-functional team leadership. Proven track record of building Internal Developer Platforms (IDP), driving cloud migration initiatives, maintaining PCI DSS compliance, and delivering secure, scalable cloud-native solutions. Delivered measurable outcomes including 40% faster infrastructure onboarding, 20-30% infrastructure cost optimization, and improved developer productivity through platform standardization and automation."
   },
   "sectionLabels": {
     "about": "About me",
@@ -24,7 +24,7 @@
     "blogs": "Blogs"
   },
   "publicUrl": "https://jaani-builds.github.io/",
-  "summary": "Technical Product Owner with 10+ years of experience in multi-cloud platforms, infrastructure engineering, and software delivery. Experienced in product strategy, roadmap planning, stakeholder management, and cross-functional team leadership. Proven track record of building Internal Developer Platforms (IDP), driving cloud migration initiatives, maintaining PCI DSS compliance, and delivering secure, scalable cloud-native solutions. Delivered measurable outcomes including 40% faster infrastructure onboarding, 20-30% infrastructure cost optimization, and improved developer productivity through platform standardization and automation.",
+  "summary": "Product Owner with 10+ years of experience in multi-cloud platforms, infrastructure engineering, and software delivery. Experienced in product strategy, roadmap planning, stakeholder management, and cross-functional team leadership. Proven track record of building Internal Developer Platforms (IDP), driving cloud migration initiatives, maintaining PCI DSS compliance, and delivering secure, scalable cloud-native solutions. Delivered measurable outcomes including 40% faster infrastructure onboarding, 20-30% infrastructure cost optimization, and improved developer productivity through platform standardization and automation.",
   "resumeUrl": "assets/resume/Jaani_Francis_Nickolas_Resume.docx",
   "experience": [
     {
@@ -33,7 +33,7 @@
       "location": "Singapore",
       "employmentType": "Full-time",
       "start": "Jul 2024",
-      "end": "Present",
+      "end": "Jul 2026",
       "highlights": [
         "Owned the vision and roadmap for Jetstar's Internal Developer Platform (IDP) and Unified Infrastructure, cutting infrastructure onboarding time by ~40% and driving adoption across 10+ engineering squads, eliminating ticket-driven dependencies on the platform team.",
         "Drove voluntary adoption of the Platform Team Engagement Guide across 10+ squads with no mandate, standardizing onboarding and automation-first workflows through enablement, not enforcement.",
@@ -289,18 +289,28 @@
       "name": "AWS Certified Cloud Practitioner",
       "issuer": "Amazon Web Services",
       "badgeUrl": "assets/images/certifications/aws-certified-cloud-practitioner.png",
+      "credentialUrl": "https://www.credly.com/earner/earned/badge/9188c5f0-2956-4cff-96ef-4f46a9eab366",
       "studyGuideUrl": "https://github.com/jaani-builds/knowledge-bank/blob/main/AWS%20Certs/AWS_CLF_Study_Guide.pdf"
+    },
+    {
+      "name": "Professional Scrum Product Owner™ II (PSPO II)",
+      "issuer": "Scrum.org",
+      "badgeUrl": "assets/images/certifications/scrum-certified-professional-scrum-product-owner-ii.png",
+      "credentialUrl": "https://www.credly.com/earner/earned/badge/fc4885ba-2197-4656-abc4-48d306ef45db",
+      "studyGuideUrl": "https://github.com/jaani-builds/knowledge-bank/blob/main/Scrum.org/PSPO_II_Study_Guide.pdf"
     },
     {
       "name": "AWS Certified AI Practitioner",
       "issuer": "Amazon Web Services",
       "badgeUrl": "assets/images/certifications/aws-certified-ai-practitioner.png",
+      "credentialUrl": "https://www.credly.com/earner/earned/badge/83225228-148b-44f0-9931-08bb7d489bf8",
       "studyGuideUrl": "https://github.com/jaani-builds/knowledge-bank/blob/main/AWS%20Certs/AWS_AIF_Study_Guide.pdf"
     },
     {
       "name": "HashiCorp Certified Terraform Associate",
       "issuer": "HashiCorp",
       "badgeUrl": "assets/images/certifications/hashicorp-certified-terraform-associate-004.png",
+      "credentialUrl": "https://www.credly.com/earner/earned/badge/5ca271e7-9828-4189-ba63-705ed72ff9bd",
       "studyGuideUrl": ""
     },
     {
