@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Jaani Francis Nickolas",
-    "role": "Product Owner | Multi-Cloud Platforms | Infrastructure Engineering | Internal Developer Platforms",
+    "role": "Project Manager | Product Owner | Multi-Cloud Platforms | Infrastructure Engineering | Internal Developer Platforms",
     "email": "ping.jaani@gmail.com",
     "phone": "+65 85123705",
     "location": "Singapore",
@@ -10,8 +10,8 @@
     "photoUrl": "assets/images/profile/jaani.png"
   },
   "meta": {
-    "title": "Jaani Francis Nickolas | Product Owner | Multi-Cloud Platforms | Infrastructure Engineering | Internal Developer Platforms",
-    "description": "Product Owner with 10+ years of experience in multi-cloud platforms, infrastructure engineering, and software delivery. Experienced in product strategy, roadmap planning, stakeholder management, and cross-functional team leadership. Proven track record of building Internal Developer Platforms (IDP), driving cloud migration initiatives, maintaining PCI DSS compliance, and delivering secure, scalable cloud-native solutions. Delivered measurable outcomes including 40% faster infrastructure onboarding, 20-30% infrastructure cost optimization, and improved developer productivity through platform standardization and automation."
+    "title": "Jaani Francis Nickolas | Project Manager | Product Owner | Multi-Cloud Platforms | Infrastructure Engineering | Internal Developer Platforms",
+    "description": "Technical Project Manager and Product Owner with 10+ years of experience in multi-cloud platforms, infrastructure engineering, and software delivery. Experienced in project delivery, governance, roadmap planning, stakeholder management, and cross-functional team leadership. Proven track record of building Internal Developer Platforms (IDP), driving cloud migration initiatives, maintaining PCI DSS compliance, and delivering secure, scalable cloud-native solutions. Delivered measurable outcomes including 40% faster infrastructure onboarding, 20–30% infrastructure cost optimization, and improved developer productivity through platform standardization and automation."
   },
   "sectionLabels": {
     "about": "About me",
@@ -27,6 +27,20 @@
   "summary": "Product Owner with 10+ years of experience in multi-cloud platforms, infrastructure engineering, and software delivery. Experienced in product strategy, roadmap planning, stakeholder management, and cross-functional team leadership. Proven track record of building Internal Developer Platforms (IDP), driving cloud migration initiatives, maintaining PCI DSS compliance, and delivering secure, scalable cloud-native solutions. Delivered measurable outcomes including 40% faster infrastructure onboarding, 20-30% infrastructure cost optimization, and improved developer productivity through platform standardization and automation.",
   "resumeUrl": "assets/resume/Jaani_Francis_Nickolas_Resume.docx",
   "experience": [
+    {
+      "title": "Project Manager",
+      "company": "FPT Asia Pacific",
+      "location": "Singapore",
+      "employmentType": "Full-time",
+      "start": "Oct 2026",
+      "end": "Present",
+      "highlights": [
+        "Leading end-to-end delivery of cloud platform and architecture standardization initiatives on a Singapore Government statutory board engagement — managing scope, timelines, budget, risks, and dependencies across engineering, cloud operations, security, and enterprise architecture stakeholders.",
+        "Driving standardization of cloud infrastructure, platform services, and deployment patterns — facilitating architecture review sessions, governance checkpoints, and technical workshops aligned to government cloud and security compliance requirements.",
+        "Coordinating with enterprise architects, cloud engineers, DevOps teams, and vendors to drive adoption of Infrastructure-as-Code, CI/CD, and reusable cloud patterns — supporting cloud migration and modernization across AWS, Azure, and GCP environments.",
+        "Establishing and tracking project KPIs, milestones, and delivery metrics — maintaining RAID logs, status reports, and executive presentations, and managing change requests through to smooth transition into operational support."
+      ]
+    },
     {
       "title": "Technical Product Owner",
       "company": "Jetstar Airways",
